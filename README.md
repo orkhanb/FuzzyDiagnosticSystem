@@ -1,2 +1,2 @@
-# FuzzyDiagnosticSystem
+# Fuzzy Diagnostic System
 Fuzzy Logic Toolbox
