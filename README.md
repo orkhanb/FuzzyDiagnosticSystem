@@ -1,2 +1,2 @@
 # Fuzzy Diagnostic System
-Fuzzy Logic Toolbox
+Fuzzy Logic Application for Back Pain Diagnosis in matlab.
