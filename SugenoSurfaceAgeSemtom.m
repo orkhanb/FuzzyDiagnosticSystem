@@ -17,17 +17,17 @@ for i=1:size(Y,2)
     
     
 y = Y(i);   s = S(j);
-yamuk(altsinir_yas,0,18,26,30,ustsinir_yas,y);  genc_xi=mu_xi; 
-ucgen(altsinir_yas,22,33,50,ustsinir_yas,y);  orta_xi=mu_xi; 
-yamuk(altsinir_yas,38,48,58,100, ustsinir_yas,y);  yasli_xi=mu_xi; 
+trapezoid(altsinir_yas,0,18,26,30,ustsinir_yas,y);  genc_xi=mu_xi; 
+triangle(altsinir_yas,22,33,50,ustsinir_yas,y);  orta_xi=mu_xi; 
+trapezoid(altsinir_yas,38,48,58,100, ustsinir_yas,y);  yasli_xi=mu_xi; 
 
 
 
 %3. Semptomlara ait uyelik fonk girisleri ...
-ucgen(altsinir_semptom,0,0,25,ustsinir_semptom,s);  semptom_az_xi=mu_xi; 
-ucgen(altsinir_semptom,15,39,60,ustsinir_semptom,s);  semptom_orta_xi=mu_xi; 
-ucgen(altsinir_semptom,50,69,85,ustsinir_semptom,s);  semptom_yuksek_xi=mu_xi; 
-ucgen(altsinir_semptom,75,100,100,ustsinir_semptom,s);  semptom_cokyuksek_xi=mu_xi;
+triangle(altsinir_semptom,0,0,25,ustsinir_semptom,s);  semptom_az_xi=mu_xi; 
+triangle(altsinir_semptom,15,39,60,ustsinir_semptom,s);  semptom_orta_xi=mu_xi; 
+triangle(altsinir_semptom,50,69,85,ustsinir_semptom,s);  semptom_yuksek_xi=mu_xi; 
+triangle(altsinir_semptom,75,100,100,ustsinir_semptom,s);  semptom_cokyuksek_xi=mu_xi;
 
 
 %cikish Tedavi

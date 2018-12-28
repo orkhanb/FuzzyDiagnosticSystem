@@ -14,19 +14,19 @@ for i=1:size(Y,2)
     for j=1:size(S,2)
     toplam_agirlik = 0;
      y = Y(i);   s = S(j);
-    yamuk(altsinir_yas,0,18,26,30,ustsinir_yas,y);  genc_xi=mu_xi; 
-    ucgen(altsinir_yas,22,33,50,ustsinir_yas,y);  orta_xi=mu_xi; 
-    yamuk(altsinir_yas,38,48,58,100, ustsinir_yas,y);  yasli_xi=mu_xi; 
+    trapezoid(altsinir_yas,0,18,26,30,ustsinir_yas,y);  genc_xi=mu_xi; 
+    triangle(altsinir_yas,22,33,50,ustsinir_yas,y);  orta_xi=mu_xi; 
+    trapezoid(altsinir_yas,38,48,58,100, ustsinir_yas,y);  yasli_xi=mu_xi; 
 
 
-    ucgen(altsinir_semptom,0,0,25,ustsinir_semptom,s);  semptom_az_xi=mu_xi; 
-    ucgen(altsinir_semptom,15,39,60,ustsinir_semptom,s);  semptom_orta_xi=mu_xi; 
-    ucgen(altsinir_semptom,50,69,85,ustsinir_semptom,s);  semptom_yuksek_xi=mu_xi; 
-    ucgen(altsinir_semptom,75,100,100,ustsinir_semptom,s);  semptom_cokyuksek_xi=mu_xi;
+    triangle(altsinir_semptom,0,0,25,ustsinir_semptom,s);  semptom_az_xi=mu_xi; 
+    triangle(altsinir_semptom,15,39,60,ustsinir_semptom,s);  semptom_orta_xi=mu_xi; 
+    triangle(altsinir_semptom,50,69,85,ustsinir_semptom,s);  semptom_yuksek_xi=mu_xi; 
+    triangle(altsinir_semptom,75,100,100,ustsinir_semptom,s);  semptom_cokyuksek_xi=mu_xi;
 
-    ucgen2(tedavi_altsinir,0,15,30,tedavi_ustsinir); dinlenme_mu=mu_X;
-    ucgen2(tedavi_altsinir,25,55,80,tedavi_ustsinir);  ilaclar_mu=mu_X;
-    ucgen2(tedavi_altsinir,70,85,100,tedavi_ustsinir);  ameliyat_mu=mu_X;
+    triangle2(tedavi_altsinir,0,15,30,tedavi_ustsinir); dinlenme_mu=mu_X;
+    triangle2(tedavi_altsinir,25,55,80,tedavi_ustsinir);  ilaclar_mu=mu_X;
+    triangle2(tedavi_altsinir,70,85,100,tedavi_ustsinir);  ameliyat_mu=mu_X;
     
     %kurallar
     mu_kural1=min(genc_xi,semptom_cokyuksek_xi);
