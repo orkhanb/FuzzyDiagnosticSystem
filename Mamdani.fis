@@ -1,0 +1,65 @@
+[System]
+Name='Mamdami'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Yash'
+Range=[0 100]
+NumMFs=3
+MF1='genc':'trapmf',[0 18 26 30]
+MF2='orta':'trimf',[22 33 50]
+MF3='yasli':'trapmf',[38 48 58 100]
+
+[Input2]
+Name='BMI'
+Range=[0 45]
+NumMFs=3
+MF1='dusuk':'trimf',[0 0 20]
+MF2='orta':'trimf',[15 22 30]
+MF3='yuksek':'trimf',[25 45 45]
+
+[Input3]
+Name='Symptom'
+Range=[0 100]
+NumMFs=4
+MF1='orta':'trimf',[15 39 60]
+MF2='yuksek':'trimf',[50 69 85]
+MF3='az':'trimf',[0 0 25]
+MF4='cokyuksek':'trimf',[75 100 100]
+
+[Output1]
+Name='tedavi'
+Range=[0 100]
+NumMFs=3
+MF1='dinlenme&fizyoterapi':'trimf',[0 15 30]
+MF2='ilaclar&phisicalT':'trimf',[25 55 80]
+MF3='ameliyat_operasyonu':'trimf',[70 85 100]
+
+[Output2]
+Name='teshis'
+Range=[0 100]
+NumMFs=4
+MF1='fitik&daralma':'trimf',[0 12.5 25]
+MF2='diskKayması':'trimf',[22 37 52]
+MF3='osteoporoz':'trimf',[73 88 101]
+MF4='VertebralarınArtriti':'trimf',[49 64 78]
+
+[Rules]
+1 3 4, 1 1 (1) : 1
+2 3 4, 3 2 (1) : 1
+3 2 4, 3 2 (1) : 1
+3 3 4, 3 2 (1) : 1
+1 3 2, 2 4 (1) : 1
+2 2 2, 2 4 (1) : 1
+1 3 1, 2 1 (1) : 1
+1 1 1, 1 3 (1) : 1
+2 1 1, 3 3 (1) : 1
